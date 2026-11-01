@@ -51,6 +51,12 @@ footer.fixed-bottom .container { color: var(--muted); }
 .desc { font-size: 1.02rem; color: var(--muted); font-weight: 500; }
 .desc a { color: var(--blue-3); }
 
+/* School seals shown inline next to the first mention of each school */
+.school-logo {
+  display: inline-block; height: 1.2em; width: auto; vertical-align: -0.25em; margin-right: .22em;
+}
+a:has(> .school-logo) { white-space: nowrap; }
+
 /* Bio */
 article .clearfix { margin-top: 116px !important; }
 article .clearfix > p:first-child > br { display: none; }
