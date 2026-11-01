@@ -222,8 +222,8 @@
           {%- if entry.code %}
           <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
           {%- if entry.stars %}
-              <a href="{{ entry.code }}/stargazers" target="_blank" rel="noopener noreferrer">
-                  <img src="https://img.shields.io/github/stars/{{ entry.code | replace: 'https://github.com/', '' }}.svg" alt="GitHub stars">
+              <a href="{{ entry.code }}/stargazers" class="btn btn-sm z-depth-0 github-stars-btn" role="button" target="_blank" rel="noopener noreferrer" title="GitHub stars" data-repo="{{ entry.code | replace: 'https://github.com/', '' }}">
+                  <i class="fas fa-star"></i><span class="star-label">GitHub Stars</span><span class="star-count" hidden></span>
               </a>
           {%- endif %}
           {%- endif %}

@@ -1,0 +1,17 @@
+<div class="publications pub-stages">
+  {%- for stage in site.data.pub_stages %}
+  <section class="pub-stage" id="stage-{{ stage.key }}">
+    <header class="pub-stage-header">
+      <h3 class="pub-stage-title"><span class="pub-stage-role">{{ stage.role }}</span> <span class="pub-stage-at">@</span> <span class="pub-stage-place">{{ stage.place }}</span></h3>
+      <p class="pub-stage-theme"><span class="pub-stage-theme-icon" aria-hidden="true">🤔</span><span class="pub-stage-theme-text">{{ stage.theme }}</span></p>
+    </header>
+    <div class="pub-stage-papers">
+      {%- if include.selected %}
+      {% bibliography -f {{ site.scholar.bibliography }} -q @*[selected=true && pubstage={{ stage.key }}]* %}
+      {%- else %}
+      {% bibliography -f {{ site.scholar.bibliography }} -q @*[pubstage={{ stage.key }}]* %}
+      {%- endif %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>

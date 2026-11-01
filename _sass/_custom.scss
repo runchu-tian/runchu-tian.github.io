@@ -1,0 +1,171 @@
+/*******************************************************************************
+ * Site design: blue-gradient theme, research-stage timeline, recent updates.
+ * Fonts (IBM Plex Sans/Serif, Noto Serif SC subset) are loaded in head.html.
+ ******************************************************************************/
+
+:root {
+  --blue-1: #16305e;
+  --blue-2: #1f4f8f;
+  --blue-3: #3b6eb5;
+  --blue-4: #5a93d0;
+  --blue-5: #8cc1e6;
+  --blue-soft: #eef4fb;
+  --ink: #18202e;
+  --muted: #5f6878;
+  --line: #e4eaf2;
+  --bg: #f8fafc;
+  --grad: linear-gradient(90deg, var(--blue-1), var(--blue-3) 45%, var(--blue-4) 75%, var(--blue-5));
+  --global-theme-color: var(--blue-2);
+  --global-hover-color: var(--blue-2);
+}
+
+/* Base type */
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.navbar, .btn, footer { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+a { color: var(--blue-2); }
+a:hover { color: var(--blue-3); text-decoration: none; }
+
+/* Nav + footer */
+.navbar { background: rgba(248, 250, 252, .92) !important; box-shadow: none !important; border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+.navbar .nav-link { color: var(--muted) !important; font-size: .95rem; font-weight: 500; }
+.navbar .nav-item.active .nav-link { color: var(--blue-2) !important; font-weight: 600; }
+footer.fixed-bottom { font-size: .8rem; background: rgba(248, 250, 252, .95) !important; color: var(--muted) !important; border-top: 1px solid var(--line); }
+footer.fixed-bottom .container { color: var(--muted); }
+
+/* Name + subtitle */
+.post-header { margin-bottom: 0; }
+.post-title { font-family: 'IBM Plex Serif', 'Noto Serif SC', Georgia, serif; font-size: 2.8rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+.post-title .font-weight-bold {
+  font-weight: 700 !important;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.desc { font-size: 1.02rem; color: var(--muted); font-weight: 500; }
+.desc a { color: var(--blue-3); }
+
+/* Bio */
+article .clearfix { margin-top: 116px !important; }
+article .clearfix > p:first-child > br { display: none; }
+article .clearfix p { font-size: 1.02rem; line-height: 1.75; color: #2c3442; margin-bottom: 1rem; }
+article .clearfix strong { font-weight: 600; color: var(--ink); }
+article .clearfix a strong { color: var(--blue-2); }
+article .clearfix a:hover strong { color: var(--blue-3); }
+
+/* Profile photo + social icons */
+.profile { margin-left: 2.5rem; }
+.profile img { display: block; border-radius: 20px !important; box-shadow: 0 18px 40px -16px rgba(22, 48, 94, .45) !important; }
+.profile i { color: var(--blue-2); }
+.profile .fa-lg, .profile .ai-lg { font-size: 1.15em; }
+.profile a { margin-right: 10px !important; }
+.profile a:last-of-type { margin-right: 0 !important; }
+
+/* Section headings (Recent Updates, Publications) */
+article > h2 { margin-top: 72px !important; padding-bottom: 18px !important; border-bottom: 0 !important; position: relative; }
+article > h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 120px; height: 4px; border-radius: 4px; background: var(--grad); }
+article > h2 strong { font-family: 'IBM Plex Serif', Georgia, serif; font-weight: 700; color: var(--ink); }
+article > h2 small span { color: var(--muted); font-weight: 400; }
+.section-title::before { filter: hue-rotate(-62deg) saturate(.9); }
+
+/* Recent updates */
+.updates-note {
+  display: flex; align-items: baseline; gap: .55rem; margin: 1.6rem 0 0;
+  background: var(--blue-soft); border: 1px solid #d6e3f3; border-radius: 12px; padding: .65rem 1rem;
+  font-size: .98rem; color: #2c3442;
+}
+.updates-note strong { color: var(--blue-2); font-weight: 600; }
+.updates-note-icon { flex: none; }
+
+.updates { list-style: none; position: relative; margin: 1.2rem 0 0; padding: 0 0 0 2.4rem; }
+.updates::before {
+  content: ''; position: absolute; left: .55rem; top: .5rem; bottom: .9rem; width: 2px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--blue-3), var(--blue-5));
+}
+.update { position: relative; padding-bottom: 1.05rem; }
+.update::before {
+  content: ''; position: absolute; left: -2.4rem; top: .3rem; margin-left: .62rem; transform: translateX(-50%);
+  width: .7rem; height: .7rem; border-radius: 50%; background: var(--blue-3); box-shadow: 0 0 0 4px var(--bg);
+}
+.update:first-child::before { background: var(--blue-1); width: .8rem; height: .8rem; }
+.update-date {
+  display: block; margin-bottom: .15rem;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue-3); font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.update-icon { margin-right: .35rem; line-height: 1; }
+.update-text { display: inline; font-size: .98rem; color: #2c3442; line-height: 1.6; }
+.update-text a { color: var(--blue-2); }
+.update-text a:hover { color: var(--blue-3); }
+.update-text strong { font-weight: 600; }
+
+/* Research-stage timeline */
+.pub-stages { position: relative; margin-top: 1.5rem; padding-left: 2.4rem; }
+.pub-stages::before {
+  content: ''; position: absolute; left: .55rem; top: .6rem; bottom: 1rem; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--blue-1), var(--blue-3) 40%, var(--blue-5));
+}
+.pub-stage { position: relative; margin-bottom: 2.8rem; scroll-margin-top: 80px; }
+.pub-stage-header { margin-bottom: 1.1rem; }
+.pub-stage-header::before {
+  content: ''; position: absolute; left: -2.4rem; top: .35rem; width: 1.15rem; height: 1.15rem; margin-left: .52rem; transform: translateX(-50%);
+  border-radius: 50%; background: #fff; border: 4px solid var(--blue-2); box-shadow: 0 0 0 4px var(--bg);
+}
+.pub-stage:nth-child(2) .pub-stage-header::before { border-color: var(--blue-3); }
+.pub-stage:nth-child(3) .pub-stage-header::before { border-color: var(--blue-4); }
+.pub-stage:nth-child(4) .pub-stage-header::before { border-color: var(--blue-5); }
+.publications .pub-stage-title {
+  font-family: 'IBM Plex Serif', Georgia, serif; font-size: 1.2rem; font-weight: 600; color: var(--ink);
+  margin: 0 0 .3rem; padding: 0; border: 0;
+}
+.pub-stage-at { color: var(--blue-4); font-weight: 500; margin: 0 .1em; }
+.pub-stage-place { color: var(--blue-2); }
+.publications .pub-stage .pub-stage-theme {
+  display: flex; align-items: baseline; gap: .45rem; margin: 0;
+  font-family: 'IBM Plex Serif', Georgia, serif; font-size: 1.05rem; line-height: 1.5;
+}
+.publications .pub-stage .pub-stage-theme,
+.publications .pub-stage .pub-stage-theme-text { color: #6b7280 !important; }
+.pub-stage-theme-icon { flex: none; }
+.pub-stage .publications { margin-top: 0; }
+
+/* Publication cards */
+.publications ol.bibliography li {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  padding: 1.2rem 1.3rem .75rem; margin-bottom: 1rem;
+  box-shadow: 0 1px 2px rgba(24, 32, 46, .04), 0 8px 24px -14px rgba(22, 48, 94, .18);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.publications ol.bibliography li:hover { transform: translateY(-1px); box-shadow: 0 1px 2px rgba(24, 32, 46, .05), 0 14px 32px -14px rgba(22, 48, 94, .28); }
+.publications ol.bibliography li .row { align-items: flex-start; }
+.publications ol.bibliography li .abbr { height: auto; margin-bottom: 0; }
+.publications ol.bibliography li .abbr abbr.badge {
+  margin-bottom: .55rem; background: var(--blue-2) !important; color: #fff !important; border-radius: 6px;
+  font-weight: 600; font-size: .74rem; padding: .32em .8em; letter-spacing: .02em;
+}
+.publications .preview-container figure,
+.publications .preview-container picture { margin: 0; display: block; }
+.publications ol.bibliography li .preview { max-width: 100%; border-radius: 10px !important; box-shadow: none !important; border: 1px solid var(--line); }
+.publications ol.bibliography li .title { font-family: 'IBM Plex Serif', Georgia, serif; font-weight: 600; font-size: 1.08rem; line-height: 1.4; margin-bottom: .2rem; }
+.publications ol.bibliography li .author { font-size: .9rem; color: var(--muted); line-height: 1.55; margin-bottom: .15rem; }
+.publications ol.bibliography li .author a { color: var(--muted); border-bottom: 1px dotted #b9c4d3; }
+.publications ol.bibliography li .author a:hover { color: var(--blue-2); border-bottom-color: var(--blue-2); }
+.publications ol.bibliography li .author ins { color: var(--blue-2) !important; text-decoration: none; }
+.publications ol.bibliography li .periodical { font-size: .9rem; color: var(--muted); }
+.publications ol.bibliography li .periodical:empty { display: none; }
+.publications ol.bibliography li .links { margin-top: .55rem; }
+.publications ol.bibliography li .links a.btn {
+  margin: 0 .4rem .4rem 0 !important; box-shadow: none !important;
+  font-family: inherit; text-transform: none; font-size: .78rem; font-weight: 500;
+  color: var(--ink); background: var(--blue-soft); border: 0; border-radius: 8px; padding: .25rem .8rem;
+}
+.publications ol.bibliography li .links a.btn:hover { background: var(--blue-2); color: #fff; }
+.publications ol.bibliography li .badges { padding-bottom: 0; }
+.publications ol.bibliography li .hidden:not(.open) { border-color: transparent !important; }
+.publications ol.bibliography li .hidden.open { border-radius: 10px; background: #fff; }

@@ -1,0 +1,13 @@
+            <h2 class="updates-heading" style="margin-top: 80px; border-bottom: 1px solid rgb(239, 236, 236); padding-bottom: 30px;">
+              <span class="section-title updates-title"><strong>Recent Updates</strong></span>
+            </h2>
+            <p class="updates-note"><span class="updates-note-icon" aria-hidden="true">💼</span><span>I am actively looking for <strong>research internships for Summer 2027</strong>. Feel free to reach out!</span></p>
+            <ul class="updates">
+              {%- for item in site.data.updates %}
+              <li class="update">
+                <time class="update-date" datetime="{{ item.date | date: '%Y-%m' }}">{{ item.date | date: "%b %Y" }}</time>
+                <span class="update-icon" aria-hidden="true">{{ item.icon }}</span>
+                <div class="update-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+              </li>
+              {%- endfor %}
+            </ul>

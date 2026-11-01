@@ -662,6 +662,25 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+
+        a.github-stars-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35em;
+          font-variant-numeric: tabular-nums;
+
+          .fa-star {
+            color: #e3b341;
+          }
+
+          .star-count {
+            font-weight: 600;
+            padding-left: 0.5em;
+            margin-left: 0.15em;
+            border-left: 1px solid currentColor;
+            border-left-color: rgba(127, 127, 127, 0.35);
+          }
+        }
       }
 
       .badges {

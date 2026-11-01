@@ -1,0 +1,21 @@
+# Research stages shown on the publications list, newest first.
+# Each bib entry picks its stage with `pubstage={key}`.
+- key: unc
+  role: First-Year PhD Student
+  place: UNC-Chapel Hill
+  theme: How to make agentic post-training for long-horizon tasks more effective, efficient, and legible?
+
+- key: ucsd
+  role: Visiting Student
+  place: UC San Diego
+  theme: How to make the decoding of diffusion language models more efficient?
+
+- key: uiuc
+  role: MSCS, Data Mining Group
+  place: UIUC
+  theme: How to use LLMs to improve information retrieval and extraction from the perspective of semantic structure?
+
+- key: thu
+  role: Undergraduate
+  place: Tsinghua University
+  theme: How to equip early LLM agents with tool calling, coding, and long-context capabilities?

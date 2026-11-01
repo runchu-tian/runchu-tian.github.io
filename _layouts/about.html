@@ -118,6 +118,10 @@ layout: default
                 animation: float 3s ease-in-out infinite;
               }
 
+              .updates-title::before {
+                background-image: url('{{ "assets/img/icons/updates.svg" | relative_url }}');
+                animation: float 3s ease-in-out infinite;
+              }
               .experience-title::before {
                 background-image: url('{{ "assets/img/icons/experience.svg" | relative_url }}');
                 animation: bounce 2s ease-in-out infinite;
@@ -243,6 +247,11 @@ layout: default
             <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
+
+          <!-- Recent updates -->
+          {% if site.data.updates -%}
+            {%- include recent_updates.html %}
+          {% endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}

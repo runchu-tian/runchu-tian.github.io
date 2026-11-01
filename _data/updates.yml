@@ -1,0 +1,16 @@
+# Recent updates on the homepage, newest first. `text` is Markdown.
+- date: 2026-10-01
+  icon: 📄
+  text: Our new preprint [**MiRL**](https://arxiv.org/abs/2610.35697) is out! We use error-targeted RL to correct the recurring misbehaviors of terminal agents. Check out the [paper](https://arxiv.org/abs/2610.35697) and [blog](https://runchu-tian.github.io/MiRL/).
+
+- date: 2026-09-01
+  icon: 🎉
+  text: "[**SimSD**](https://arxiv.org/abs/2606.02544), our speculative decoding method for diffusion language models, is accepted to **NeurIPS 2026**!"
+
+- date: 2026-08-01
+  icon: 🚀
+  text: Started my PhD at [**UNC-Chapel Hill**](https://cs.unc.edu/), working with [Prof. Mohit Bansal](https://www.cs.unc.edu/~mbansal/).
+
+- date: 2026-05-01
+  icon: 🎓
+  text: Graduated from [**UIUC**](https://siebelschool.illinois.edu/) with my M.S. in Computer Science.
