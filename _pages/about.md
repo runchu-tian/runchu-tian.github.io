@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: First Year PhD Student @ <a href='https://cs.unc.edu/'><img class='school-logo' src='/assets/img/logos/unc.png' alt=''>UNC-Chapel Hill</a>
+subtitle: First Year PhD Student @ <a href='https://cs.unc.edu/'>UNC-Chapel Hill</a>
 profile:
   align: right
   image: prof_pic.jpg
@@ -17,7 +17,7 @@ social: false  # includes social icons at the bottom of the page
 \\
 Hi! This is Runchu.
 
-I am a first year PhD student in [**Prof. Mohit Bansal's Group**](https://www.cs.unc.edu/~mbansal/) at [**UNC-Chapel Hill**](https://cs.unc.edu/), working on **LLM post-training for long-horizon agentic tasks**.
+I am a first year PhD student in [**Prof. Mohit Bansal's Group**](https://www.cs.unc.edu/~mbansal/) at [<img class="school-logo" src="/assets/img/logos/unc.png" alt="">**UNC-Chapel Hill**](https://cs.unc.edu/), working on **LLM post-training for long-horizon agentic tasks**.
 
 I received my [**MS**](https://siebelschool.illinois.edu/academics/graduate/ms-program) degree from [<img class="school-logo" src="/assets/img/logos/uiuc.png" alt="">**UIUC**](https://illinois.edu/), where I was advised by Prof. [**Jiawei Han**](http://hanj.cs.illinois.edu/) on **LLM enhanced Information Retrieval**. Before that, I earned my **Bachelor** degree from [<img class="school-logo" src="/assets/img/logos/thu.png" alt="">**Tsinghua University**](https://www.tsinghua.edu.cn/en/), where I was advised by Prof. [**Zhiyuan Liu**](https://nlp.csai.tsinghua.edu.cn/~lzy/) on **LLM agents**.
 
