@@ -1,5 +1,27 @@
+@misc{tian2026mirlerrortargetedreinforcementlearning,
+        show={true},
+        authorship={first},
+        abbr={Preprint},
+        title={MiRL: Error-Targeted Reinforcement Learning for Correcting Terminal Agent Misbehaviors},
+        abstract={Error-targeted learning gives a legible way to improve a model: identify specific weaknesses of the model, train the model to fix these weaknesses, and check whether the weaknesses are fixed. We study how to apply error-targeted learning to terminal agents, which solve long-horizon tasks specified in natural language by interacting with a command shell. Existing error-targeted methods are designed for single-turn tasks, and existing analyses of agent failures are used to evaluate and debug agents rather than to train them. We propose Misbehavior-driven RL (MiRL), which first profiles the errors of a policy to find generalizable misbehaviors: kinds of wrong steps that recur across many environments. MiRL then trains the policy with RL, starting rollouts at the steps where these misbehaviors occur and rewarding a rollout only if it passes the tests and avoids the misbehavior. On Qwen3.5-4B, eight misbehaviors account for 52.1% of wrong steps. After training with MiRL, the policy repeats the measured misbehaviors 43% to 57% less often on average on unseen prefixes. MiRL outperforms TMax-4B on Terminal-Bench Lite (51.8% vs. 47.4%) and matches it on Terminal-Bench 2.1 (21.3% vs. 20.6%), while using 35% of its rollouts. These results show that error-targeted learning can be applied to realistic, long-horizon terminal tasks.},
+        author={Runchu Tian and Zaid Khan and Zun Wang and Justin Chih-Yao Chen and Mohit Bansal},
+        year={2026},
+        eprint={2610.35697},
+        archivePrefix={arXiv},
+        primaryClass={cs.LG},
+        url={https://arxiv.org/abs/2610.35697},
+        note={<em>arXiv preprint arXiv:2610.35697</em>},
+        selected={true},
+        preview={mirl.png},
+        pdf={https://arxiv.org/pdf/2610.35697},
+        code={https://github.com/runchu-tian/MiRL},
+        blog={https://runchu-tian.github.io/MiRL/},
+        bibtex_show={true}
+}
+
 @inproceedings{tian2026corank,
         show={true},
+        authorship={first},
         abbr={KDD'26},
         title={CoRank: LLM-Based Compact Reranking with Document Features for Scientific Retrieval},
         abstract={Scientific retrieval is essential for advancing scientific knowledge discovery. Within this process, document reranking plays a critical role in refining first-stage retrieval results. Recently, LLMs have become popular reranking backbones for their strong domain knowledge. However, standard LLM listwise reranking faces challenges in the scientific domain: first-stage retrieval is often suboptimal, and full-text reranking limits the number of candidates that can fit in the context window. To address these challenges, we propose CoRank, a training-free, model-agnostic reranking framework that extracts semantic document features, performs coarse-grained reranking over compact representations, and then applies fine-grained reranking over full texts of the top candidates. Experiments on five academic retrieval datasets show that CoRank significantly improves reranking performance across different LLM backbones.},
@@ -13,8 +35,30 @@
         doi={10.1145/3770855.3818844},
         bibtex_show={true}
 }
+
+@misc{cui2026simsdsimplespeculativedecoding,
+        show={true},
+        authorship={first},
+        abbr={NeurIPS'26},
+        title={SimSD: Simple Speculative Decoding in Diffusion Language Models},
+        abstract={Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) LLMs, offering faster inference through parallel or blockwise decoding. However, their masked language modeling formulation remains incompatible with standard token-level speculative decoding, one of the most effective acceleration techniques for AR models. In AR decoding, the causal mask preserves temporally valid token-level contexts, enabling a target model to verify multiple drafted tokens in a single forward pass. In contrast, dLLMs rely on mask tokens and bidirectional attention, causing the effective context to change across denoising steps and preventing direct token-level speculative verification. To bridge this gap, we propose a simple but effective speculative decoding algorithm for diffusion language models, named SimSD, which mainly adopts a plug-and-play masking strategy that equips dLLMs with temporally valid token-level contexts for speculative decoding. Our method explicitly introduces reference tokens from draft-model predictions and designs an attention mask that regulates their interaction with current-step tokens, allowing dLLMs to compute valid logits for drafted tokens in a single forward pass. This restores the key verification ability provided by causal masking in AR models while preserving the parallel decoding advantages of dLLMs. The proposed method is training-free and can be flexibly integrated with other acceleration techniques such as KV cache and blockwise decoding. Experiments on SDAR-family dLLMs across four benchmarks show that our method achieves up to 7.46x higher decoding throughput while maintaining and even improving average generation quality.},
+        author={Junxia Cui* and Haotian Ye* and Runchu Tian* and Hongcan Guo and Jinya Jiang and Haoru Li and Chaojie Ren and Yiming Huang and Kaijie Zhu and Zhongkai Yu and Kun Zhou and Jingbo Shang},
+        year={2026},
+        eprint={2606.02544},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2606.02544},
+        note={<em>Advances in Neural Information Processing Systems (NeurIPS) 2026</em>},
+        selected={true},
+        preview={simsd.png},
+        pdf={https://arxiv.org/pdf/2606.02544},
+        code={https://github.com/airevo2/SimSD-release},
+        bibtex_show={true}
+}
+
 @inproceedings{tian2025distance,
         show={true},
+        authorship={first},
         abbr={ACL'25},
         title={Distance between Relevant Information Pieces Causes Bias in Long-Context LLMs},
         abstract={Positional bias in large language models hinders their ability to effectively process long inputs. A prominent example is the "lost in the middle" phenomenon, where LLMs struggle to utilize relevant information situated in the middle of the input. While prior research primarily focuses on single pieces of relevant information, real-world applications often involve multiple relevant information pieces. To bridge this gap, we present LongPiBench, a benchmark designed to assess positional bias involving multiple pieces of relevant information. It includes various tasks and input lengths. Thorough experiments are conducted with three commercial and six open-source models. These experiments reveal that while most current models are more robust against the "lost in the middle" issue, there also exist noticeable biases related to the spacing of relevant information pieces. These findings highlight the importance of evaluating and reducing positional biases for long-context LLMs.},
@@ -28,23 +72,9 @@
         bibtex_show={true}
 }
 
-@inproceedings{tian2024debugbench,
-        show={true},
-        abbr={ACL'24},
-        title={DebugBench: Evaluating Debugging Capability of Large Language Models},
-        abstract={Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce 'DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and four open-source models in a zero-shot scenario. We find that (1) while closed-source models exhibit inferior debugging performance compared to humans, open-source models relatively lower pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.},
-        author={Runchu Tian* and Yining Ye* and Yujia Qin and Xin Cong and Yankai Lin and Yinxu Pan and Yesai Wu and Haotian Hui and Weichuan Liu and Zhiyuan Liu and Maosong Sun},
-        year={2024},
-        booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
-        selected={true},
-        preview={debugbench.png},
-        pdf={https://aclanthology.org/2024.findings-acl.247.pdf},
-        code={https://github.com/thunlp/DebugBench},
-        bibtex_show={true}
-}
-
 @inproceedings{kargupta2025beyond,
         show={true},
+        authorship={first},
         abbr={ACL'25},
         title={Beyond True or False: Retrieval-Augmented Hierarchical Analysis of Nuanced Claims},
         abstract={Claims made by individuals or entities are oftentimes nuanced and cannot be clearly labeled as entirely "true" or "false"—as is frequently the case with scientific and political claims. However, a claim (e.g., "vaccine A is better than vaccine B") can be dissected into its integral aspects and sub-aspects (e.g., efficacy, safety, distribution), which are individually easier to validate. This enables a more comprehensive, structured response that provides a well-rounded perspective on a given problem while also allowing the reader to prioritize specific angles of interest within the claim (e.g., safety towards children). Thus, we propose ClaimSpect, a retrieval-augmented generation-based framework for automatically constructing a hierarchy of aspects typically considered when addressing a claim and enriching them with corpus-specific perspectives. This structure hierarchically partitions an input corpus to retrieve relevant segments, which assist in discovering new sub-aspects. Moreover, these segments enable the discovery of varying perspectives towards an aspect of the claim (e.g., support, neutral, or oppose) and their respective prevalence (e.g., "how many biomedical papers believe vaccine A is more transportable than B?"). We apply ClaimSpect to a wide variety of real-world scientific and political claims featured in our constructed dataset, showcasing its robustness and accuracy in deconstructing a nuanced claim and representing perspectives within a corpus. Through real-world case studies and human evaluation, we validate its effectiveness over multiple baselines.},
@@ -58,8 +88,25 @@
         bibtex_show={true}
 }
 
+@inproceedings{tian2024debugbench,
+        show={true},
+        authorship={first},
+        abbr={ACL'24},
+        title={DebugBench: Evaluating Debugging Capability of Large Language Models},
+        abstract={Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce 'DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and four open-source models in a zero-shot scenario. We find that (1) while closed-source models exhibit inferior debugging performance compared to humans, open-source models relatively lower pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.},
+        author={Runchu Tian* and Yining Ye* and Yujia Qin and Xin Cong and Yankai Lin and Yinxu Pan and Yesai Wu and Haotian Hui and Weichuan Liu and Zhiyuan Liu and Maosong Sun},
+        year={2024},
+        booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
+        selected={true},
+        preview={debugbench.png},
+        pdf={https://aclanthology.org/2024.findings-acl.247.pdf},
+        code={https://github.com/thunlp/DebugBench},
+        bibtex_show={true}
+}
+
 @article{liang2024exploring,
         show={true},
+        authorship={first},
         abbr={TMLR},
         title={Exploring Format Consistency for Instruction Tuning},
         abstract={Instruction tuning has emerged as a promising approach to enhancing large language models in following human instructions. It is shown that increasing the diversity and number of instructions in the training data can consistently enhance generalization performance, which facilitates a recent endeavor to collect various instructions and integrate existing instruction tuning datasets into larger collections. However, different users have their unique ways of expressing instructions, and there often exist variations across different datasets in the instruction styles and formats, i.e., format inconsistency. In this work, we propose a framework named Unified Instruction Tuning (UIT), which calls OpenAI APIs for automatic format transfer among different instruction tuning datasets such as PromptSource, FLAN and CrossFit. With the framework, we (1) demonstrate the necessity of maintaining format consistency in instruction tuning; (2) improve the generalization performance on unseen instructions on T5-LM-xl; (3) provide a novel perplexity-based denoising method to reduce the noise of automatic format transfer to make the UIT framework more practical and a smaller offline model based on GPT-J that achieves comparable format transfer capability to OpenAI APIs to reduce costs in practice. Further analysis regarding variations of targeted formats and other effects is intended.},
@@ -69,6 +116,28 @@
         preview={uit.png},
         pdf={https://openreview.net/pdf?id=n8fZ6mY6PB},
         code={https://github.com/thunlp/UnifiedInstructionTuning},
+        bibtex_show={true}
+}
+
+@inproceedings{xu-etal-2026-obschema,
+        show={true},
+        abbr={EMNLP'26},
+        title={{O}b{S}chema: From Local Observations to Global Entity Attribute Schemas in Scientific Literature},
+        abstract={Scientific literature reports fine-grained entity properties, but such knowledge is scattered across papers, expressed with heterogeneous names, and scoped by experimental conditions. Closed-schema extraction requires predefined attribute vocabularies that are hard to enumerate for property-rich scientific entities, while open-schema extraction often yields duplicate and condition-specific attribute labels. We introduce entity-centric attribute schema induction, which constructs a hierarchical type-level attribute schema from a scientific corpus. We propose ObSchema an observation-to-schema framework that extracts local entity-property observations, aggregates corpus-level evidence to identify recurring attributes, and refines them through value-aware merging and adaptive grouping. On two physical science domains, ObSchema consistently outperforms strong LLM-based schema-induction baselines across different backbone models, producing more compact and coherent schemas.},
+        author={Xueqiang Xu and Wonbin Kweon and Jimeng Shi and Runchu Tian and Yunfan Kang and Wei Hu and Shaowen Wang and Jiawei Han},
+        editor={Lee, Hung-Yi and Dev, Sunipa and Li, Jessy and Elliott, Desmond},
+        booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+        month=oct,
+        year={2026},
+        address={Budapest, Hungary},
+        publisher={Association for Computational Linguistics},
+        url={https://aclanthology.org/2026.emnlp-main.1103/},
+        doi={10.18653/2026.emnlp-main.1103},
+        pages={25278--25300},
+        ISBN={979-8-89176-459-0},
+        selected={true},
+        preview={obschema.png},
+        pdf={https://aclanthology.org/2026.emnlp-main.1103.pdf},
         bibtex_show={true}
 }
 
