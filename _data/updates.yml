@@ -1,7 +1,7 @@
 # Recent updates on the homepage, newest first. `text` is Markdown.
 - date: 2026-10-01
   icon: 📄
-  text: Our new preprint [**MiRL**](https://arxiv.org/abs/2610.35697) is out! We use error-targeted RL to correct the recurring misbehaviors of terminal agents. Check out the [paper](https://arxiv.org/abs/2610.35697) and [blog](https://runchu-tian.github.io/MiRL/).
+  text: Our new preprint [**MiRL**](https://arxiv.org/abs/2610.35697) is out! We use error-targeted RL to correct the recurring misbehaviors of terminal agents. [Check it out](https://runchu-tian.github.io/MiRL/)!
 
 - date: 2026-09-01
   icon: 🎉
