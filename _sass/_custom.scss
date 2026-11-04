@@ -1,6 +1,6 @@
 /*******************************************************************************
  * Site design: blue-gradient theme, research-stage timeline, recent updates.
- * Fonts (IBM Plex Sans/Serif, Noto Serif SC subset) are loaded in head.html.
+ * Fonts (IBM Plex Sans/Serif, Noto Sans SC subset) are loaded in head.html.
  ******************************************************************************/
 
 :root {
@@ -22,7 +22,7 @@
 /* Base type */
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', 'Noto Sans SC', system-ui, sans-serif;
   font-size: 16px;
   color: var(--ink);
   background: var(--bg);
@@ -43,7 +43,7 @@ footer.fixed-bottom .container { color: var(--muted); }
 
 /* Name + subtitle */
 .post-header { margin-bottom: 0; }
-.post-title { font-family: 'IBM Plex Serif', 'Noto Serif SC', Georgia, serif; font-size: 2.8rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
+.post-title { font-family: 'IBM Plex Serif', Georgia, serif; font-size: 2.8rem; font-weight: 500; color: var(--ink); margin-bottom: .35rem; }
 .post-title .font-weight-bold {
   font-weight: 700 !important;
   background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;

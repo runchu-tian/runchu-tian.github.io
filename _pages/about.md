@@ -15,7 +15,7 @@ social: false  # includes social icons at the bottom of the page
 ---
 
 \\
-Hi! This is Runchu.
+Hi! This is Runchu Tian (田润初).
 
 I am a first year PhD student in [**Prof. Mohit Bansal's Group**](https://www.cs.unc.edu/~mbansal/) at [<img class="school-logo" src="/assets/img/logos/unc.png" alt="">**UNC-Chapel Hill**](https://cs.unc.edu/), working on **LLM post-training for long-horizon agentic tasks**.
 
